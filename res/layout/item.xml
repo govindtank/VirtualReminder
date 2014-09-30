@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/MetroPink"
+             >
+
+            <TextView
+                android:id="@+id/Textview_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="390dp"
+                android:minHeight="45dp"
+                android:textSize="23sp"
+                android:textColor="#ffffffff"
+                 />
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/Textview_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="170dp"
+                android:minHeight="45dp"
+                android:textSize="20sp"
+                android:textColor="#ffffffff"
+                 />
+
+            <TextView
+                android:id="@+id/Textview_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="130dp"
+                android:minHeight="45dp"
+                android:textSize="20sp"
+                android:textColor="#ffffffff"/>
+             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:background="@color/MetroPink"
+            android:orientation="horizontal" >
+            
+            <ImageView
+                android:id="@+id/RecordedPhoto"
+                android:src="@drawable/take_photo256"
+                android:background="@color/MetroPink"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>                
+            
+             <ImageView
+                android:id="@+id/RecordedVoice"
+                android:src="@drawable/mic_phone256"
+                android:background="@color/MetroPink"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

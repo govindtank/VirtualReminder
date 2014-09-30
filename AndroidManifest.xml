@@ -1,0 +1,52 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.virtualreminder"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.virtualreminder.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         
+        <uses-library android:name="android.test.runner"/>
+        
+        <activity android:name=".ExpListActivity" android:label="@string/Expired_Button"></activity>
+        <activity android:name=".NewActivity" android:label="@string/New_Button" android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity android:name=".AudioRecordTest" android:label="@string/Audio_Button" android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name=".MyAlarm" android:label="@string/My_Alarm"></activity>
+        <activity android:name=".ExistingActivity" android:label="@string/Existing_Activity" android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity android:name=".enlargeActivity" android:label="enlarge_Activity" android:theme="@android:style/Theme.Dialog"></activity>
+    </application>
+    
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.virtualreminder" android:label="Test for my app" />
+    
+    <!--调用摄像头的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--往sdcard中写入数据的权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<!--在sdcard中创建/删除文件的权限 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<!-- 访问互联网 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- 包管理 -->
+	<uses-permission android:name="android.permission.RESTART_PACKAGES"></uses-permission>
+	 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+	
+</manifest>

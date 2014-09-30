@@ -1,0 +1,183 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:background="@color/MetroDarkPurple"
+    >
+    
+ 
+<LinearLayout 
+    android:id="@+id/LinearLayout01" 
+    android:orientation="vertical" 
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:layout_margin="15dip">
+	<RelativeLayout 
+	    android:id="@+id/LinearLayout02" 
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content">
+		<TextView 
+		    android:id="@+id/TextView01" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content" 
+		    android:text="New Item"  
+		    android:textColor="#ffffffff"
+		    android:minWidth="80dip" 
+		    android:textSize="30sp"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:layout_centerVertical="true"
+		    android:layout_alignParentLeft= "true">
+		</TextView>    
+		
+	    <Button
+	    android:id="@+id/DeleteBtn" 
+	    android:layout_height="70dip" 
+	    android:layout_width="180dip"
+	    android:text="Delete" 
+	    android:textSize="30sp"
+	    android:textColor="#ffffffff"
+	    android:layout_centerHorizontal="true"
+	    android:background="@color/MetroGrassGreen"
+	    >
+	   </Button>
+	   
+		<Button
+	    android:id="@+id/SaveBtn" 
+	    android:layout_height="70dip" 
+	    android:text="Save" 
+	    android:textSize="30sp"
+	    android:textColor="#ffffffff"
+	    android:layout_width="180dip"  
+	    android:layout_alignParentRight= "true"
+	    android:background="@color/MetroOrange">
+	   </Button>
+	
+	</RelativeLayout>
+	
+	<EditText 
+	    android:id="@+id/EditText" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"  
+	    android:minLines="12" 
+	    android:hint="What's due ?"
+	    android:textColor="#ffffffff"
+	    android:gravity="top"
+	    android:background="@color/MetroMediumPurple"
+	    android:layout_marginTop="15dip">
+	    
+	</EditText>
+	
+	
+    <LinearLayout 
+	  android:id="@+id/LinearLayout08" 
+	  android:layout_height="wrap_content" 
+	  android:layout_width="fill_parent"
+	  android:layout_marginTop="15dip"
+	  android:weightSum="4">
+		
+      <ImageButton
+	  android:id="@+id/btnCamera"
+	  android:layout_width="160dip"
+      android:layout_height="160dip"
+	  android:layout_gravity="center"
+	  android:layout_marginLeft="0dp"
+	  android:layout_marginRight="0dp"
+	  android:layout_weight="1"
+      android:background="@drawable/take_photo256">
+	  </ImageButton>
+	  
+      <LinearLayout 
+	    android:id="@+id/LinearLayout05" 
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom= "true"
+	    android:layout_alignParentLeft= "true"
+	    android:layout_alignParentRight= "true"
+	    android:orientation="vertical"
+	    android:layout_weight="2"
+	    >
+      
+	   <LinearLayout 
+	   android:id="@+id/LinearLayout06" 
+	   android:layout_width="wrap_content" 
+	   android:layout_height="72dip"
+	   android:layout_marginLeft="15dip"
+	   android:layout_marginRight="15dip"	   
+	   android:background="@color/MetroGreen">
+		<TextView 
+		android:id="@+id/vdate" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge" 
+		android:width="200dip"
+		android:hint="Date"
+		android:gravity="center_horizontal"
+		android:textColor="#ffffffff">
+		</TextView>
+		<Button 
+		android:id="@+id/setDate" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="+" 
+		android:textColor="#ffffffff"
+		android:textStyle="bold" 
+	    android:textSize="40dip"
+	    >		    
+		</Button>
+	  </LinearLayout>
+		
+	  <LinearLayout 
+	  android:id="@+id/LinearLayout07" 
+	  android:layout_width="wrap_content" 
+	  android:layout_height="72dip"
+	  android:background="@color/MetroGreen"
+	  android:layout_marginLeft="15dip"
+	  android:layout_marginRight="15dip"
+	  android:layout_marginTop="15dip">
+	    <TextView 
+		android:id="@+id/vtime" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:textAppearance="?android:attr/textAppearanceLarge" 
+		android:width="200dip" 
+		android:hint="Time"
+		android:gravity="center_horizontal"
+		android:textColor="#ffffffff">    
+		</TextView>
+		<Button 
+		android:id="@+id/setTime" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="+" 
+		android:textColor="#ffffffff"
+		android:textStyle="bold" 
+		android:textSize="40dip"> 
+		</Button>
+	  </LinearLayout>		
+    </LinearLayout>
+    
+      	
+	
+	<ImageButton
+    android:id="@+id/btnRecorder"
+	android:layout_width="160dip"
+	android:layout_height="160dip"
+	android:layout_gravity="center"
+	android:layout_marginLeft="0dp"
+	android:layout_marginRight="0dp"
+	android:layout_weight="1"
+	android:background="@drawable/mic_phone256"
+	android:onClick="AudioRecord">
+	</ImageButton>  
+  </LinearLayout>	  
+    	
+  </LinearLayout>
+	<ImageView 
+	android:id="@+id/viewforgesture3" 
+	android:layout_height="300dip" 
+	android:layout_width="fill_parent"
+	android:layout_alignParentBottom= "true"
+	android:background="@color/MetroLightPurple">	    
+	</ImageView>
+</RelativeLayout>
